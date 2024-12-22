@@ -17,7 +17,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update && sudo apt-get install cmake libgtest-dev -y
-          ./vcpkg/vcpkg install gtest cpr libxml2
+          ./vcpkg/vcpkg install cpr libxml2
       
       - name: Get repository code
         uses: actions/checkout@v3
