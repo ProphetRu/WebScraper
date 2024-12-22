@@ -19,7 +19,7 @@ jobs:
       - name: Install vcpkg
         run: '.\vcpkg\bootstrap-vcpkg.bat -disableMetrics'
         
-      - name: Install Dependencies
+      - name: Install dependencies
         run: '.\vcpkg\vcpkg install gtest cpr libxml2'
         
       - name: Integrate vcpkg

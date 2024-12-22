@@ -14,7 +14,7 @@ jobs:
           cd vcpkg
           ./bootstrap-vcpkg.sh -disableMetrics
       
-      - name: Install libraries
+      - name: Install dependencies
         run: ./vcpkg/vcpkg install gtest cpr libxml2
       
       - name: Get repository code
