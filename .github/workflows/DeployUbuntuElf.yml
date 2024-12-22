@@ -8,6 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     permissions: write-all
     steps:
+      - name: Get repository code
+        uses: actions/checkout@v3
+        with:
+          submodules: true
+          
       - name: Clone vcpkg
         run: |
           git clone https://github.com/microsoft/vcpkg.git
@@ -15,14 +20,7 @@ jobs:
           ./bootstrap-vcpkg.sh -disableMetrics
       
       - name: Install dependencies
-        run: |
-          sudo apt-get update && sudo apt-get install cmake libgtest-dev -y
-          ./vcpkg/vcpkg install cpr libxml2
-      
-      - name: Get repository code
-        uses: actions/checkout@v3
-        with:
-          submodules: true
+        run: ./vcpkg/vcpkg install gtest cpr libxml2
       
       - name: Build project
         run: |
