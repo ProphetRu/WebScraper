@@ -14,9 +14,6 @@ jobs:
           cd vcpkg
           ./bootstrap-vcpkg.sh -disableMetrics
       
-      - name: Add vcpkg to PATH
-        run: echo "$GITHUB_WORKSPACE/vcpkg" >> $GITHUB_ENV
-      
       - name: Install libraries
         run: ./vcpkg/vcpkg install gtest cpr libxml2
       
