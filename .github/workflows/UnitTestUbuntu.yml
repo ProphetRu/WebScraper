@@ -22,6 +22,10 @@ jobs:
         with:
           submodules: true
       
+      - name: DEBUG LIST DIRECTORY
+        run: |
+          ls -R
+      
       - name: Build project
         run: |
           mkdir -p build
