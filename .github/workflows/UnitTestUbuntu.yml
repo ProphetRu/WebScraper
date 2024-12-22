@@ -21,19 +21,7 @@ jobs:
       
       - name: Install dependencies
         run: ./vcpkg/vcpkg install gtest cpr libxml2
-      
-      - name: DEBUG LIST DIRECTORY
-        run: |
-          pwd
-          ls -la
-          cd ..
-          pwd
-          ls -la
-          cd ..
-          pwd
-          ls -la
-          cd ..
-      
+
       - name: Build project
         run: |
           mkdir -p build

@@ -26,7 +26,9 @@ jobs:
       
       - name: Build project
         run: |
-          cmake .
+          mkdir -p build
+          cd build
+          cmake .. -DCMAKE_TOOLCHAIN_FILE=/home/runner/work/WebScraper/WebScraper/vcpkg/scripts/buildsystems/vcpkg.cmake
           cmake --build . --config Release
       
       - name: Test project
