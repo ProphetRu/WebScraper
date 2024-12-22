@@ -34,7 +34,11 @@ namespace CsvGeneratorTest
 			{ "date3", "open3", "high3", "low3", "close3", "adj_close3" },
 		};
 
+#ifdef _WIN32
 		EXPECT_THROW({ CsvGenerator::Generate("Z:\\invalid\\path\\out.csv", std::move(ds)); }, std::runtime_error);
+#else
+		EXPECT_THROW({ CsvGenerator::Generate("/invalid/path/out.csv", std::move(ds)); }, std::runtime_error);
+#endif
 	}
 
 	TEST(CsvGeneratorTest, TestOK)
