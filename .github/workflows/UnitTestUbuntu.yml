@@ -25,7 +25,12 @@ jobs:
       - name: DEBUG LIST DIRECTORY
         run: |
           pwd
-          cd .. && ls -R
+          cd ..
+          pwd
+          ls -la
+          cd ..
+          pwd
+          ls -la
       
       - name: Build project
         run: |
