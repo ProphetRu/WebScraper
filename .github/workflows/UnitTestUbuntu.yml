@@ -24,8 +24,8 @@ jobs:
       
       - name: Build project
         run: |
-          cmake . -DCMAKE_TOOLCHAIN_FILE=./vcpkg/scripts/buildsystems/vcpkg.cmake
-          cmake --build . --config Release -DCMAKE_TOOLCHAIN_FILE=./vcpkg/scripts/buildsystems/vcpkg.cmake
+          cmake . -DCMAKE_TOOLCHAIN_FILE=./vcpkg/vcpkg/scripts/buildsystems/vcpkg.cmake
+          cmake --build . --config Release
       
       - name: Test project
         run: ctest
