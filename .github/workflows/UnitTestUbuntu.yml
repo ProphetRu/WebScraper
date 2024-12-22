@@ -15,7 +15,9 @@ jobs:
           ./bootstrap-vcpkg.sh -disableMetrics
       
       - name: Install dependencies
-        run: ./vcpkg/vcpkg install gtest cpr libxml2
+        run: |
+          sudo apt-get update && sudo apt-get install cmake libgtest-dev -y
+          ./vcpkg/vcpkg install gtest cpr libxml2
       
       - name: Get repository code
         uses: actions/checkout@v3
