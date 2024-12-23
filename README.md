@@ -11,19 +11,7 @@ WebScraper - a program that parses (scrapes) a website (`fust for fun`)
 * [cpr](https://github.com/libcpr/cpr)
 * [libxml2](https://github.com/GNOME/libxml2)
 
-## Build local Linux
-```shell
-vcpkg install gtest cpr libxml2
-
-cd WebScraper
-mkdir build && cd build
-
-cmake .. -DCMAKE_TOOLCHAIN_FILE="path/to/vcpkg/scripts/buildsystems/vcpkg.cmake"
-
-cmake --build . --config Release
-```
-
-## Build local Windows
+## Build local Windows/Linux
 ```shell
 vcpkg install gtest cpr libxml2
 vcpkg integrate install
