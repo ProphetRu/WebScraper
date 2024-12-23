@@ -18,7 +18,7 @@ vcpkg install gtest cpr libxml2
 cd WebScraper
 mkdir build && cd build
 
-cmake ..
+cmake .. -DCMAKE_TOOLCHAIN_FILE="path/to/vcpkg/scripts/buildsystems/vcpkg.cmake"
 
 cmake --build . --config Release
 ```
